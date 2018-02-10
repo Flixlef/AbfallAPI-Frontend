@@ -28,6 +28,16 @@ html,
     font-size: 30pt;
 }
 
+@media(max-width: 768px) {
+    #main {
+        font-size: 10pt;
+    }
+
+    #next-waste-appointments i {
+        font-size: 18pt;
+    }    
+}
+
 .yellow i {
     color: #d0d800;
 }
@@ -50,9 +60,18 @@ html,
 
 #footer {
     padding-top: 50px;
-    color: #fff;
     font-size: 14pt;
 }
+
+#footer a {
+    color: #fff !important;
+}
+
+#footer a:hover {
+    color: #bbb !important;
+    text-decoration: none;
+}
+
 
 #footer .col-xs-6 {
     padding-left: 0px;

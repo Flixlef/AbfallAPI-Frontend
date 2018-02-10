@@ -9,7 +9,7 @@ $('document').ready(function() {
 
 var setStreets = function(streets) {
     $.ajax({
-        url: 'http://abfallapi20180209115402.azurewebsites.net/api/appointments/streets',
+        url: 'https://abfallapi20180209115402.azurewebsites.net/api/appointments/streets',
         dataType: 'json',
         success: function( response ) {
             appendOptions(response);
@@ -18,6 +18,7 @@ var setStreets = function(streets) {
 }
 
 var appendOptions = function(options) {
+    appendOption(null, "Bitte eine Straße auswählen");
     Object.keys(options).forEach(key => { 
         appendOption(key,options[key]);
     })
@@ -30,7 +31,7 @@ var appendOption = function(key, value) {
 
 var setWasteAppointments = function(id) {
     $.ajax({
-        url: 'http://abfallapi20180209115402.azurewebsites.net/api/appointments?id=' + id,
+        url: 'https://abfallapi20180209115402.azurewebsites.net/api/appointments?id=' + id,
         dataType: 'json',
         success: function( response ) {
             $('#main table').show();
